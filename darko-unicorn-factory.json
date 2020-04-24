@@ -1,0 +1,57 @@
+{
+    "typeName": "Darko::Unicorn::Factory",
+    "description": "Uncorns for the Masses",
+    "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+    "properties": {
+        "UID": {
+            "description": "The ID given to the Unicorn",
+            "type": "string"
+        },
+        "Name": {
+            "description": "Name of the Unicorn",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 250
+        },
+        "Superpower": {
+            "description": "Unicorn Superpower",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 250
+        },
+        "Family": {
+            "description": "Unicorn family in the form of familiy.size  - eg. u3.glorious",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 250
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "Name",
+        "Family"
+    ],
+    "readOnlyProperties": [
+        "/properties/UID"
+    ],
+    "primaryIdentifier": [
+        "/properties/UID"
+    ],
+    "handlers": {
+        "create": {
+            "permissions": []
+        },
+        "read": {
+            "permissions": []
+        },
+        "update": {
+            "permissions": []
+        },
+        "delete": {
+            "permissions": []
+        },
+        "list": {
+            "permissions": []
+        }
+    }
+}
